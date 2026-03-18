@@ -16,7 +16,7 @@
         function checkHI(){
         var temp = document.getElementById("HeatIndex").value;    
         var humid; // same as temp
-        var HeatIndex; // formula
+        var HeatIndex.toFixed(0); // formula
 
         var status = "";
 
@@ -24,13 +24,13 @@
              case (HeatIndex <= 27): //compare
              status = "Comfortable / Cool";
              break;
-             case (28 <= HeatIndex >= 32): //compare
+             case (HeatIndex >= 28 && HeatIndex <= 32): //compare
              status = "Warm";
              break;
-             case (33 <= HeatIndex >= 37): //compare
+             case (HeatIndex >= 33 && HeatIndex <= 37): //compare
              status = "Hot";
              break;
-             case (38 <= HeatIndex >= 41): //compare
+             case (HeatIndex >= 38 && HeatIndex <= 41): //compare
              status = "Very Hot / Caution";
              break;
              case (HeatIndex >= 42): //compare
@@ -47,7 +47,6 @@
         }
     </script>
     
-</body>
-</html>
+
 </body>
 </html>
